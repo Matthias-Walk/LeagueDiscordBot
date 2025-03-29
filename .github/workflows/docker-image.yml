@@ -25,7 +25,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./LeagueDiscordBot
           file: ./LeagueDiscordBot/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/league-discord-bot:latest
