@@ -4,3 +4,5 @@
     build:
       context: .
       dockerfile: LeagueDiscordBot/Dockerfile
+    ports:
+      - "80:80"
