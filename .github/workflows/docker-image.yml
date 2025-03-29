@@ -31,6 +31,6 @@ jobs:
           file: ./LeagueDiscordBot/Dockerfile
           push: true
           tags: |
-            your-dockerhub-username/your-image-name:latest
-            your-dockerhub-username/your-image-name:${{ env.IMAGE_TAG }}
+            matthiaswalk/league-discord-bot:latest
+            matthiaswalk/league-discord-bot:${{ env.IMAGE_TAG }}
 
