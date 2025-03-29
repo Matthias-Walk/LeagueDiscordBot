@@ -30,6 +30,7 @@ jobs:
         with:
           file: ./LeagueDiscordBot/Dockerfile
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: |
             matthiaswalk/league-discord-bot:latest
             matthiaswalk/league-discord-bot:${{ env.IMAGE_TAG }}
