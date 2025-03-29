@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main
+      - release/*.*.*
 
 jobs:
   build-and-push:
@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Extract version from branch name
+        run: echo "IMAGE_TAG=${GITHUB_REF#refs/heads/release/}" >> $GITHUB_ENV
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
@@ -27,4 +30,7 @@ jobs:
         with:
           file: ./LeagueDiscordBot/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/league-discord-bot:latest
+          tags: |
+            your-dockerhub-username/your-image-name:latest
+            your-dockerhub-username/your-image-name:${{ env.IMAGE_TAG }}
+
