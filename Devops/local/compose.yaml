@@ -1,8 +1,8 @@
 ﻿services:
-  leaguediscordbot:
+  league-discord-bot:
     image: leaguediscordbot
     build:
       context: .
-      dockerfile: LeagueDiscordBot/Dockerfile
+      dockerfile: ../../LeagueDiscordBot/Dockerfile
     ports:
       - "80:80"

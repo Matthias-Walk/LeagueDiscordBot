@@ -1,0 +1,5 @@
+﻿services:
+  league-discord-bot:
+    image: matthiaswalk/league-discord-bot
+    ports:
+      - "80:80"
