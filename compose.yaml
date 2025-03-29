@@ -1,0 +1,6 @@
+﻿services:
+  leaguediscordbot:
+    image: leaguediscordbot
+    build:
+      context: .
+      dockerfile: LeagueDiscordBot/Dockerfile
